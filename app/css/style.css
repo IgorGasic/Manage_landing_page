@@ -1,3 +1,543 @@
-h1 {
-  color: red;
+@font-face {
+  font-family: "Vietnam";
+  src: url("../fonts/BeVietnamPro-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Vietnam";
+  src: url("../fonts/BeVietnamPro-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Vietnam";
+  src: url("../fonts/BeVietnamPro-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Vietnam";
+  font-weight: 400;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 12px 34px;
+  color: hsl(0deg, 0%, 98%);
+  background-color: hsl(12deg, 88%, 59%);
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.button:hover {
+  opacity: 80%;
+  box-shadow: 0px 5px 5px 0px rgb(242, 95, 58);
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+}
+
+.service__number {
+  margin-left: 15px;
+  margin-top: -5px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .service__number {
+    margin-left: 5px;
+  }
+}
+
+.service__numb {
+  padding: 10px 24px;
+  background-color: hsl(12deg, 88%, 59%);
+  color: #fff;
+  border-radius: 20px;
+}
+@media screen and (max-width: 767px) {
+  .service__numb {
+    z-index: 1;
+  }
+}
+
+.service__description {
+  margin-left: 25px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .service__description {
+    margin-left: 5px;
+  }
+}
+
+.service__title {
+  color: hsl(228deg, 39%, 23%);
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 25px;
+}
+@media screen and (max-width: 767px) {
+  .service__title {
+    margin-left: 0;
+    background-color: hsl(13deg, 100%, 96%);
+    width: 100%;
+    padding: 10px 0 10px 25px;
+    position: relative;
+    left: -15px;
+    z-index: 0;
+  }
+}
+
+.service__text {
+  line-height: 1.6;
+  margin-left: 85px;
+}
+@media screen and (max-width: 767px) {
+  .service__text {
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+}
+
+.service--one {
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 767px) {
+  .service--one {
+    margin-bottom: 55px;
+  }
+}
+
+.service--two {
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 767px) {
+  .service--two {
+    margin-bottom: 55px;
+  }
+}
+
+.client {
+  width: 540px;
+  height: 220px;
+}
+
+.wrapper {
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .nav {
+    margin-top: 35px;
+    padding: 0 15px;
+  }
+}
+
+.nav__logo {
+  padding-top: 10px;
+}
+.nav__logo:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__logo-img {
+    width: 75%;
+  }
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .nav__links {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    transform: translateY(-200%);
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    z-index: 4;
+  }
+}
+
+.active {
+  transform: translateY(0);
+}
+
+.dark-background {
+  height: 100vh;
+  background: rgb(34, 33, 33);
+  background: linear-gradient(0deg, rgb(34, 33, 33) 0%, rgb(123, 123, 125) 54%, rgb(255, 255, 255) 100%);
+}
+
+.nav__link {
+  margin-right: 45px;
+  margin-top: -15px;
+}
+@media screen and (max-width: 767px) {
+  .nav__link {
+    margin-top: 0;
+    margin-right: 0;
+    padding: 10px 0;
+  }
+}
+
+.nav__a {
+  font-size: 12px;
+  color: hsl(233deg, 12%, 13%);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .nav__a {
+    font-weight: 700;
+  }
+}
+.nav__a:hover {
+  color: hsl(227deg, 12%, 61%);
+}
+
+.nav__link--one {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .nav__link--one {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.nav__link--two {
+  margin-right: 35px;
+}
+@media screen and (max-width: 767px) {
+  .nav__link--two {
+    margin-right: 0;
+  }
+}
+
+.nav__link--three {
+  margin-right: 35px;
+}
+@media screen and (max-width: 767px) {
+  .nav__link--three {
+    margin-right: 0;
+  }
+}
+
+.nav__link--four {
+  margin-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .nav__link--four {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav__link--five {
+    margin-bottom: 30px;
+  }
+}
+
+.nav__bars {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .nav__bars {
+    display: block;
+  }
+}
+
+.nav__bar {
+  width: 25px;
+  height: 4px;
+  margin: 3px 0;
+  background-color: hsl(233deg, 12%, 13%);
+  transition: all 0.3s ease;
+}
+
+.rotate .nav__bar--one {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.rotate .nav__bar--two {
+  visibility: hidden;
+  transition: all 0s;
+}
+
+.rotate .nav__bar--three {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+@media screen and (max-width: 767px) {
+  .button--nav {
+    display: none;
+  }
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+
+.intro__container {
+  display: flex;
+  margin-top: 115px;
+}
+@media screen and (max-width: 767px) {
+  .intro__container {
+    flex-direction: column-reverse;
+    margin-top: 35px;
+  }
+}
+
+.intro__content {
+  margin-top: 62px;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .intro__content {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.intro__title {
+  font-size: 51px;
+  font-weight: 700;
+  color: hsl(228deg, 39%, 23%);
+}
+@media screen and (max-width: 767px) {
+  .intro__title {
+    text-align: center;
+    font-size: 36px;
+  }
+}
+
+.intro__description {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  padding-right: 180px;
+  line-height: 1.6;
+  color: hsl(227deg, 12%, 61%);
+}
+@media screen and (max-width: 767px) {
+  .intro__description {
+    text-align: center;
+    padding-right: 0;
+    padding: 0 25px;
+    margin-top: 10px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .intro__img {
+    width: 100%;
+  }
+}
+
+.services {
+  width: 100%;
+  height: 100%;
+}
+
+.services__container {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .services__container {
+    flex-direction: column;
+    margin-top: 105px;
+  }
+}
+
+.services__intro {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .services__intro {
+    margin-bottom: 60px;
+  }
+}
+
+.services__title {
+  font-size: 39px;
+  font-weight: 500;
+  color: hsl(228deg, 39%, 23%);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 767px) {
+  .services__title {
+    text-align: center;
+    font-size: 29px;
+    padding: 0 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}
+
+.services__text {
+  color: hsl(227deg, 12%, 61%);
+  line-height: 1.6;
+  padding-right: 200px;
+}
+@media screen and (max-width: 767px) {
+  .services__text {
+    padding-right: 0;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 28px;
+    line-height: 1.9;
+  }
+}
+
+.services__content {
+  width: 100%;
+}
+
+.clients {
+  width: 100%;
+  height: 100%;
+}
+
+.clients__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.clients__title {
+  font-size: 39px;
+  font-weight: 700;
+  color: hsl(228deg, 39%, 23%);
 }

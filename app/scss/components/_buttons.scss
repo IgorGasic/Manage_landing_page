@@ -1,0 +1,19 @@
+.button {
+    text-decoration: none;
+    font-size: $xs-font-size;
+    padding: 12px 34px;
+    color: $vary-light-gray;
+    background-color: $bright-red;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.35); 
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.35);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+
+    &:hover {
+        opacity: 80%;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(242,95,58,1);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(242,95,58,1);
+        box-shadow: 0px 5px 5px 0px rgba(242,95,58,1);
+    }
+}

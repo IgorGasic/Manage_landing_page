@@ -1,0 +1,165 @@
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    z-index: 2;
+
+    @include respond (mobile) {
+        margin-top: 35px;
+        padding: 0 15px;
+    }
+}
+
+.nav__logo {
+    padding-top: 10px;
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.nav__logo-img {
+
+    @include respond (mobile) {
+        width: 75%;
+    }
+}
+
+.nav__links {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+
+    @include respond (mobile) {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: $margin-center;
+        left: 0;
+        right: 0;
+        top: 100px;
+        transform: translateY(-200%);
+        transition: all 0.3s ease-in-out;
+        background-color: $white;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        z-index: 4;
+    }
+}
+
+.active {
+    transform: translateY(0);
+}
+
+.dark-background {
+    height: 100vh;
+    background: rgb(34,33,33);
+    background: linear-gradient(0deg, rgba(34,33,33,1) 0%, rgba(123,123,125,1) 54%, rgba(255,255,255,1) 100%); 
+}
+
+.nav__link {
+    margin-right: 45px;
+    margin-top: -15px;
+
+    @include respond (mobile) {
+        margin-top: 0;
+        margin-right: 0;
+        padding: 10px 0;
+    }
+}
+
+.nav__a {
+    font-size: $xs-font-size;
+    color: $very-dark-blue;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    @include respond (mobile) {
+        font-weight: $bold-weight;
+    }
+
+    &:hover {
+        color: $dark-grayish-blue;
+    }
+}
+
+.nav__link--one {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @include respond (mobile) {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+.nav__link--two {
+    margin-right: 35px;
+
+    @include respond (mobile) {
+        margin-right: 0;
+    }
+}
+
+.nav__link--three {
+    margin-right: 35px;
+
+    @include respond (mobile) {
+        margin-right: 0;
+    }
+}
+
+.nav__link--four {
+    margin-right: 30px;
+
+    @include respond (mobile) {
+        margin-right: 0;
+    }
+}
+
+.nav__link--five {
+    @include respond (mobile) {
+        margin-bottom: 30px;
+    }
+}
+
+.nav__bars {
+    display: none;
+
+    @include respond (mobile) {
+        display: block;
+    }
+}
+
+.nav__bar {
+    width: 25px;
+    height: 4px;
+    margin: 3px 0;
+    background-color: $very-dark-blue;
+    transition: all 0.3s ease;
+}
+
+.rotate .nav__bar--one {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.rotate .nav__bar--two {
+    visibility: hidden;
+    transition: all 0s;
+}
+
+.rotate .nav__bar--three {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.button--nav {
+    @include respond (mobile) {
+        display: none;
+    }
+}

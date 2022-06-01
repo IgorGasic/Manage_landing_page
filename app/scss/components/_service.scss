@@ -1,0 +1,80 @@
+.service {
+    display: flex;
+    flex-direction: column;
+}
+
+.service__number {
+    margin-left: 15px;
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+
+    @include respond (mobile) {
+        margin-left: 5px;
+    }
+}
+
+.service__numb {
+    padding: 10px 24px;
+    background-color: $bright-red;
+    color: $white;
+    border-radius: 20px;
+
+    @include respond (mobile) {
+        z-index: 1;
+    }
+}
+
+.service__description {
+    margin-left: 25px;
+    margin-top: 10px;
+
+    @include respond (mobile) {
+        margin-left: 5px;
+    }
+
+}
+
+.service__title {
+    color: $dark-blue;
+    font-weight: $bold-weight;
+    font-size: $s-font-size;
+    margin-left: 25px;
+
+    @include respond (mobile) {
+        margin-left: 0;
+        background-color: $very-pale-red;
+        width: 100%;
+        padding: 10px 0 10px 25px;
+        position: relative;
+        left: -15px;
+        z-index: 0;
+    }
+}
+
+.service__text {
+    line-height: 1.6;
+    margin-left: 85px;
+
+    @include respond (mobile) {
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+}
+
+.service--one {
+    margin-bottom: 45px;
+
+    @include respond (mobile) {
+        margin-bottom: 55px;
+    }
+}
+
+.service--two {
+    margin-bottom: 45px;
+
+    @include respond (mobile) {
+        margin-bottom: 55px;
+    }
+}
