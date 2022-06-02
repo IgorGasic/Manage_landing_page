@@ -8,11 +8,43 @@
     flex-direction: column;
     align-items: center;
     margin-top: 150px;
+    margin-bottom: 180px;
+
+    @include respond (mobile) {
+        margin-bottom: 35px;
+        margin-top: 70px;
+    }
 }
 
 .clients__title {
     font-size: $xl-font-size;
     font-weight: $bold-weight;
     color: $dark-blue;
+    margin-bottom: 55px;
+
+    @include respond (mobile) {
+        font-size: $m-font-size;
+        margin-bottom: 70px;
+    }
 }
 
+.clients__slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1440px;
+    width: 100%;
+    min-height: 350px;
+    width: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.clients__slider-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,45 @@
+.join {
+    width: 100%;
+    height: 100%;
+    background-color: $bright-red;
+    padding: 65px 0;
+    background-image: url('../images/bg-simplify-section-desktop.svg');
+    background-position: right right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    @include respond (mobile) {
+        padding: 145px 0 100px 0;
+        
+    }
+}
+
+.join__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond (mobile) {
+        flex-direction: column;
+    }
+}
+
+.join__title {
+    color: $white;
+    font-size: $l-font-size;
+    max-width: 450px;
+    font-weight: bold;
+    
+    @include respond (mobile) {
+        font-size: 37px;
+        padding: 0 20px;
+        text-align: center;
+        margin-top: -45px;
+        margin-bottom: 40px;
+    }
+}
+
+.button--join {
+    background-color: $white;
+    color: $bright-red;
+}

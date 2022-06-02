@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./app/css/style.css">
     <link rel="icon" type="image/x-icon" href="./app/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Manage landing page</title>
 </head>
 <body>
@@ -111,8 +114,8 @@
         <section class="clients">
             <div class="clients__container">
                 <h2 class="clients__title">What they've said</h2>
-                <div class="clients__slider">
-                    <div class="clients__slider-wrapper">
+                <div class="clients__slider js-slider">
+                    <div class="clients__slider-wrapper js-slider-wrapper">
                         <div class="client">
                             <div class="client__image">
                                 <img src="./app/images/avatar-anisha.png" alt="avatar-anisha" class="client__img">
@@ -147,7 +150,84 @@
             </div>
         </section>
         <!--Clients section end-->
+
+        <!--Join section-->
+        <section class="join">
+            <div class="wrapper">
+                <div class="join__container">
+                    <div class="join__content">
+                        <div class="join__description">
+                            <h2 class="join__title">Simplify how your team works today.</h2>
+                        </div>
+                        <div class="join__button">
+                            <a href="javascript:;" class="button button--join">Get started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Join section end-->
     </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="footer__intro">
+                        <div class="footer__logo">
+                            <img src="./app/images/logo.svg" alt="logo" class="footer__logo-img">
+                        </div>
+                        <div class="footer__social">
+                            <i class="fa-brands fa-facebook-square "></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <ul class="footer__list footer__list--one">
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Home</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Pricing</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Products</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">About Us</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__list footer__list--two">
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Careers</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Community</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="javascript:;" class="footer__a">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <form class="footer__form js-form">
+                            <div class="footer__input">
+                                <input type="text" placeholder="Updates in your inbox..." class="footer__input-field js-input">
+                                <small class="footer__small">Pleas insert a valid email</small>
+                            </div>
+                            <button class="button button--footer js-button" type="submit">Go</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__copyright-text">Copyright 2020. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script type="module" src="./app/js/main.js"></script>
 </body>
